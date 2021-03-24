@@ -17,7 +17,6 @@ import net.runelite.client.plugins.externals.oneclick.comparables.misc.Compost;
 import net.runelite.client.plugins.externals.oneclick.comparables.misc.Healer;
 import net.runelite.client.plugins.externals.oneclick.comparables.misc.Herbtar;
 import net.runelite.client.plugins.externals.oneclick.comparables.misc.Seeds;
-import net.runelite.client.plugins.externals.oneclick.comparables.misc.Phials;
 import net.runelite.client.plugins.externals.oneclick.comparables.skilling.Birdhouses;
 import net.runelite.client.plugins.externals.oneclick.comparables.skilling.Bones;
 import net.runelite.client.plugins.externals.oneclick.comparables.skilling.DarkEssence;
@@ -46,7 +45,6 @@ public enum Types
 	TIARA("Tiara", new Tiara()),
 	SPELL("Spell Casting", new Blank()),
 	BA_HEALER("BA Healer", new Healer()),
-	PHIALS_NOTES("Phials Notes", new Phials()),
 	NONE("None", new Blank());
 
 	private final String name;
