@@ -55,6 +55,7 @@ public class OneClickPlugin extends Plugin
 	@Inject
 	private OneClickConfig config;
 
+	private final Custom custom = new Custom();
 	private final Map<Integer, String> targetMap = new HashMap<>();
 
 	private ClickCompare comparable = new Blank();
@@ -169,7 +170,11 @@ public class OneClickPlugin extends Plugin
 					break;
 			}
 		}
-
+		if (config.customInvSwap() && custom.isEntryValid(event))
+		{
+			custom.modifyEntry(event);
+			return;
+		}
 		if (comparable == null)
 		{
 			throw new AssertionError("This should not be possible.");
@@ -192,6 +197,12 @@ public class OneClickPlugin extends Plugin
 
 		if (event.getMenuTarget() == null)
 		{
+			return;
+		}
+
+		if (config.customInvSwap() && custom.isClickValid(event))
+		{
+			custom.modifyClick(event);
 			return;
 		}
 
@@ -232,29 +243,29 @@ public class OneClickPlugin extends Plugin
 	private void updateConfig()
 	{
 		enableImbue = config.isUsingImbue();
+
 		Types type = config.getType();
-		switch (type)
+
+		if (config.customInvSwap())
 		{
-			case SPELL:
-				comparable = config.getSpells().getComparable();
-				comparable.setClient(client);
-				comparable.setPlugin(this);
-				if (comparable instanceof Spell)
-				{
-					((Spell) comparable).setSpellSelection(config.getSpells());
-				}
-				break;
-			case CUSTOM:
-				comparable = type.getComparable();
-				comparable.setClient(client);
-				comparable.setPlugin(this);
-				((Custom) comparable).updateMap(config.swaps());
-				break;
-			default:
-				comparable = type.getComparable();
-				comparable.setClient(client);
-				comparable.setPlugin(this);
-				break;
+			custom.updateMap(config.swaps());
+			custom.setClient(client);
+			custom.setPlugin(this);
 		}
+
+		if (type == Types.SPELL)
+		{
+			comparable = config.getSpells().getComparable();
+			comparable.setClient(client);
+			comparable.setPlugin(this);
+			if (comparable instanceof Spell)
+			{
+				((Spell) comparable).setSpellSelection(config.getSpells());
+			}
+		}
+		else
+		comparable = type.getComparable();
+		comparable.setClient(client);
+		comparable.setPlugin(this);
 	}
 }

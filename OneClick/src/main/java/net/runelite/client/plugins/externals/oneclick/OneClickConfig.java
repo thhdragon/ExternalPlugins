@@ -58,11 +58,24 @@ public interface OneClickConfig extends Config
 	}
 
 	@ConfigItem(
+			keyName = "customInvSwap",
+			name = "Enable Custom Swaps",
+			description = "Dont enable this if you don't know what you're doing.",
+			position = 5
+	)
+	default boolean customInvSwap()
+	{
+		return false;
+	}
+
+	@ConfigItem(
 		keyName = "swaps",
 		name = "Custom Inventory Swaps",
 		description = "Format is as follows: OneClickThis:WithThis" +
 			"<br>For example, 6032:13421. This will use saltpetre on compost.",
-		position = 5
+		position = 6,
+		hidden = true,
+		unhide = "customInvSwap"
 	)
 	default String swaps()
 	{

@@ -14,7 +14,6 @@ import static net.runelite.api.ItemID.WATER_RUNE;
 import net.runelite.client.plugins.externals.oneclick.comparables.ClickCompare;
 import net.runelite.client.plugins.externals.oneclick.comparables.misc.Blank;
 import net.runelite.client.plugins.externals.oneclick.comparables.misc.Compost;
-import net.runelite.client.plugins.externals.oneclick.comparables.misc.Custom;
 import net.runelite.client.plugins.externals.oneclick.comparables.misc.Healer;
 import net.runelite.client.plugins.externals.oneclick.comparables.misc.Herbtar;
 import net.runelite.client.plugins.externals.oneclick.comparables.misc.Seeds;
@@ -31,7 +30,6 @@ import net.runelite.client.plugins.externals.oneclick.comparables.skilling.Tiara
 @Getter
 public enum Types
 {
-	CUSTOM("Custom", new Custom()),
 	COMPOST("Compost", new Compost()),
 	DARTS("Darts", new Darts()),
 	FIREMAKING("Firemaking", new Firemaking()),
