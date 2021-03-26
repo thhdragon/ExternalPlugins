@@ -5,7 +5,7 @@
   "id":"oneclick-plugin",
   "releases":
   [{"date":"2021-03-26",
-    "sha512sum":"5908F449B5D7DA56FEFB6D6B3ED3C06477EBAF2E89FE64B7AD932E4582080F3F",
+    "sha512sum":"9EFCC44DD443E8BC4BB819D0BFFC2656BAB9737E71AF22399294457299F399FB6770D47EA254203B68418FE2C3AFBE5F008BE68DD8DFD5E1C327FD24870360D6",
     "version":"6.0.6",
     "url":"https://github.com/thhdragon/ExternalPlugins/blob/master/release/OneClick-6.0.6.jar?raw=true",
     "requires":"^1.0.0"}]}]
