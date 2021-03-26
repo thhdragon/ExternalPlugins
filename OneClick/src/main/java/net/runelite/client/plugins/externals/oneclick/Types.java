@@ -13,14 +13,12 @@ import static net.runelite.api.ItemID.EARTH_RUNE;
 import static net.runelite.api.ItemID.WATER_RUNE;
 import net.runelite.client.plugins.externals.oneclick.comparables.ClickCompare;
 import net.runelite.client.plugins.externals.oneclick.comparables.misc.Blank;
-import net.runelite.client.plugins.externals.oneclick.comparables.misc.Compost;
 import net.runelite.client.plugins.externals.oneclick.comparables.misc.Healer;
 import net.runelite.client.plugins.externals.oneclick.comparables.misc.Herbtar;
 import net.runelite.client.plugins.externals.oneclick.comparables.misc.Seeds;
 import net.runelite.client.plugins.externals.oneclick.comparables.misc.Phials;
 import net.runelite.client.plugins.externals.oneclick.comparables.skilling.Birdhouses;
 import net.runelite.client.plugins.externals.oneclick.comparables.skilling.Bones;
-import net.runelite.client.plugins.externals.oneclick.comparables.skilling.DarkEssence;
 import net.runelite.client.plugins.externals.oneclick.comparables.skilling.Darts;
 import net.runelite.client.plugins.externals.oneclick.comparables.skilling.Firemaking;
 import net.runelite.client.plugins.externals.oneclick.comparables.skilling.Karambwans;
@@ -31,7 +29,6 @@ import net.runelite.client.plugins.externals.oneclick.comparables.skilling.Tiara
 @Getter
 public enum Types
 {
-	COMPOST("Compost", new Compost()),
 	DARTS("Darts", new Darts()),
 	FIREMAKING("Firemaking", new Firemaking()),
 	BIRDHOUSES("Birdhouses", new Birdhouses()),
@@ -41,7 +38,6 @@ public enum Types
 	SMOKE_RUNES("Smoke Runes", new Runes("Air rune", AIR_RUNE)),
 	BONES("Bones", new Bones()),
 	KARAMBWANS("Karambwans", new Karambwans()),
-	DARK_ESSENCE("Dark Essence", new DarkEssence()),
 	SEED_SET("Tithe Farm", new Seeds()),
 	TIARA("Tiara", new Tiara()),
 	SPELL("Spell Casting", new Blank()),
