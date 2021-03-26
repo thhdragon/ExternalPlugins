@@ -7,5 +7,5 @@
   [{"date":"2021-03-26",
     "sha512sum":"5908F449B5D7DA56FEFB6D6B3ED3C06477EBAF2E89FE64B7AD932E4582080F3F",
     "version":"6.0.6",
-    "url":"https://github.com/illumineawake/illu-plugins/blob/master/release/OneClick-6.0.6.jar?raw=true",
+    "url":"https://github.com/thhdragon/ExternalPlugins/raw/master/release/OneClick-6.0.6.jar?raw=true",
     "requires":"^1.0.0"}]}]
