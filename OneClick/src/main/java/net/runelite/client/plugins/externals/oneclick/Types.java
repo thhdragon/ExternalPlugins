@@ -29,7 +29,7 @@ import net.runelite.client.plugins.externals.oneclick.comparables.skilling.Tiara
 @Getter
 public enum Types
 {
-	DARTS("Darts", new Darts()),
+	DARTS("Darts & Bolts", new Darts()),
 	FIREMAKING("Firemaking", new Firemaking()),
 	BIRDHOUSES("Birdhouses", new Birdhouses()),
 	HERB_TAR("Herb Tar", new Herbtar()),
