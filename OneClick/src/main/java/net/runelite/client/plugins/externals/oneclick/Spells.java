@@ -13,6 +13,7 @@ public enum Spells
 {
 	HIGH_ALCH("High Alch", WidgetInfo.SPELL_HIGH_LEVEL_ALCHEMY, new Spell("High Level Alchemy")),
 	SUPERHEAT("Superheat", WidgetInfo.SPELL_SUPERHEAT_ITEM, new Spell("Superheat Item")),
+	PLANK_MAKE("Plank", WidgetInfo.SPELL_PLANK_MAKE, new Spell("Plank Make")),
 	ENCHANT_SAPPHIRE("Sapphire", WidgetInfo.SPELL_LVL_1_ENCHANT, new Spell("Lvl-1 Enchant")),
 	ENCHANT_EMERALD("Emerald", WidgetInfo.SPELL_LVL_2_ENCHANT, new Spell("Lvl-2 Enchant")),
 	ENCHANT_RUBY("Ruby", WidgetInfo.SPELL_LVL_3_ENCHANT, new Spell("Lvl-3 Enchant")),

@@ -85,6 +85,16 @@ public class Spell extends ClickCompare
 						return;
 					}
 					break;
+				case PLANK_MAKE:
+					if (spell.getSpriteId() != SpriteID.SPELL_PLANK_MAKE ||
+							spell.getSpriteId() == SpriteID.SPELL_PLANK_MAKE_DISABLED ||
+							client.getBoostedSkillLevel(Skill.MAGIC) < 86 ||
+							client.getVarbitValue(4070) != 2)
+					{
+						clickItem = null;
+						return;
+					}
+					break;
 				case ENCHANT_SAPPHIRE:
 					if (spell.getSpriteId() != SpriteID.SPELL_LVL_1_ENCHANT ||
 						spell.getSpriteId() == SpriteID.SPELL_LVL_1_ENCHANT_DISABLED ||
@@ -193,6 +203,9 @@ public class Spell extends ClickCompare
 					break;
 				case SUPERHEAT:
 					setTargetItem.setTarget("<col=00ff00>Superheat Item <col=ffffff> -> " + firstEntry.getTarget());
+					break;
+				case PLANK_MAKE:
+					setTargetItem.setTarget("<col=00ff00>Plank Make <col=ffffff> -> " + firstEntry.getTarget());
 					break;
 				case ENCHANT_SAPPHIRE:
 					setTargetItem.setTarget("<col=00ff00>Lvl-1 Enchant <col=ffffff> -> " + firstEntry.getTarget());
