@@ -153,7 +153,6 @@ public class OneClickPlugin extends Plugin
 			targetMap.put(event.getIdentifier(), event.getTarget());
 		}
 
-		if (config.deprioritizeWalk())
 		{
 			if (config.getType() == Types.SEED_SET)
 			{
