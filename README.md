@@ -14,9 +14,9 @@ External plugin for use with OpenOSRS, this is a seperate entity, not OpenOSRS.
 
 ## NOTES
 if the items have left click use by default it works great, if for example it has left click eat then it doesnt put the oneclick entry at the top. workaround im using is to use the menu entry swapper plus that superman posted to prioritize the entry.
-https://discord.com/channels/610627100881190912/819438852267704350/819442082832711730
-jar is on releases page for easy access
-https://github.com/thhdragon/ExternalPlugins/releases/tag/1.0
+https://discord.com/channels/610627100881190912/819438852267704350/819442082832711730  
+jar is on releases page for easy access  
+https://github.com/thhdragon/ExternalPlugins/releases/tag/1.0  
 so for example if you want to oneclick make pineapple pizzas youd add
 2118:2289
 to the custom oneclick section then in the menuentryswapperplus (aka [z] Custom Swapper) youd add
