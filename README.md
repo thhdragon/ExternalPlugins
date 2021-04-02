@@ -31,7 +31,7 @@ to make it the left click option"
 
 ## REPO
 Add this repo to your external plugins manager by clicking the top right + button.
-Repo owner : thhdragon
+Repo owner : thhdragon  
 Repo name : ExternalPlugins
 
 ## Credit
