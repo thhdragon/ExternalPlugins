@@ -31,7 +31,8 @@ to make it the left click option"
 
 ## REPO
 Add this repo to your external plugins manager by clicking the top right + button.
-Make sure it looks like this picture below.
+Repo owner : thhdragon
+Repo name : ExternalPlugins
 
 ## Credit
 Credit to Ganom for the original oneclick plugin. 
