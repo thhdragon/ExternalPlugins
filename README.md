@@ -30,8 +30,9 @@ to make it the left click option"
 * Left click vork spawn to do crumble undead->zombified spawn
 
 ## REPO
-Add this repo to your external plugins manager by clicking the top right + button.
-Make sure it looks like this picture below.
+Add this repo to your external plugins manager by clicking the top right + button.  
+Repo owner : thhdragon  
+Repo name : ExternalPlugins
 
 ## Credit
 Credit to Ganom for the original oneclick plugin. 
