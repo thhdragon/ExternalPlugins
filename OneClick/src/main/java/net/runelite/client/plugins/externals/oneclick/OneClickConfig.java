@@ -13,11 +13,12 @@ import net.runelite.client.config.ConfigItem;
 @ConfigGroup("oneclick")
 public interface OneClickConfig extends Config
 {
+
 	@ConfigItem(
-		keyName = "Type",
-		name = "Type",
-		description = "Select which one click method you would like to use.",
-		position = 1
+			keyName = "Type",
+			name = "Type",
+			description = "Select which one click method you would like to use.",
+			position = 1
 	)
 	default Types getType()
 	{
@@ -25,10 +26,10 @@ public interface OneClickConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "spell",
-		name = "Spell Select",
-		description = "Choose a spell to One click",
-		position = 2
+			keyName = "spell",
+			name = "Spell Select",
+			description = "Choose a spell to One click",
+			position = 2
 	)
 	default Spells getSpells()
 	{
@@ -36,10 +37,10 @@ public interface OneClickConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "isUsingImbue",
-		name = "Use Magic Imbue",
-		description = "If you are using lava runes, and want to use magic imbue, enable this.",
-		position = 3
+			keyName = "isUsingImbue",
+			name = "Use Magic Imbue",
+			description = "If you are using lava runes, and want to use magic imbue, enable this.",
+			position = 3
 	)
 	default boolean isUsingImbue()
 	{
@@ -58,13 +59,13 @@ public interface OneClickConfig extends Config
 	}
 
 	@ConfigItem(
-		keyName = "swaps",
-		name = "Custom Inventory Swaps",
-		description = "Format is as follows: OneClickThis:WithThis" +
-			"<br>For example, 6032:13421. This will use saltpetre on compost.",
-		position = 5,
-		hidden = true,
-		unhide = "customInvSwap"
+			keyName = "swaps",
+			name = "Custom Inventory Swaps",
+			description = "Format is as follows: OneClickThis:WithThis" +
+					"<br>For example, 6032:13421. This will use saltpetre on compost.",
+			position = 5,
+			hidden = true,
+			unhide = "customInvSwap"
 	)
 	default String swaps()
 	{

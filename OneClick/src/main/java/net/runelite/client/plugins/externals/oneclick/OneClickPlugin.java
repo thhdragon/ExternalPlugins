@@ -6,6 +6,7 @@
  */
 package net.runelite.client.plugins.externals.oneclick;
 
+import static net.runelite.api.MenuAction.MENU_ACTION_DEPRIORITIZE_OFFSET;
 import com.google.inject.Provides;
 import java.util.HashMap;
 import java.util.Map;
@@ -16,7 +17,6 @@ import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.Client;
 import net.runelite.api.GameState;
 import net.runelite.api.MenuAction;
-import static net.runelite.api.MenuAction.MENU_ACTION_DEPRIORITIZE_OFFSET;
 import net.runelite.api.MenuEntry;
 import net.runelite.api.events.ChatMessage;
 import net.runelite.api.events.GameStateChanged;
@@ -39,25 +39,22 @@ import org.pf4j.Extension;
 
 @Extension
 @PluginDescriptor(
-	name = "One Click",
-	description = "OP One Click methods."
+		name = "One Click",
+		description = "OP One Click methods."
 )
 @Getter
 @Slf4j
 public class OneClickPlugin extends Plugin
 {
+
 	private static final String MAGIC_IMBUE_EXPIRED_MESSAGE = "Your Magic Imbue charge has ended.";
 	private static final String MAGIC_IMBUE_MESSAGE = "You are charged to combine runes!";
-
-	@Inject
-	private Client client;
-
-	@Inject
-	private OneClickConfig config;
-
 	private final Custom custom = new Custom();
 	private final Map<Integer, String> targetMap = new HashMap<>();
-
+	@Inject
+	private Client client;
+	@Inject
+	private OneClickConfig config;
 	private ClickCompare comparable = new Blank();
 	private boolean enableImbue;
 	private boolean imbue;
@@ -212,7 +209,8 @@ public class OneClickPlugin extends Plugin
 		}
 
 		MenuEntry old = new MenuEntry(
-			event.getMenuOption(), event.getMenuTarget(), event.getId(), event.getMenuAction().getId(), event.getActionParam(), event.getWidgetId(), false
+				event.getMenuOption(), event.getMenuTarget(), event.getId(), event.getMenuAction().getId(),
+				event.getActionParam(), event.getWidgetId(), false
 		);
 		MenuEntry tmp = old.clone();
 		boolean updated = false;
@@ -258,8 +256,10 @@ public class OneClickPlugin extends Plugin
 			}
 		}
 		else
-		comparable = type.getComparable();
-		comparable.setClient(client);
-		comparable.setPlugin(this);
+		{
+			comparable = type.getComparable();
+			comparable.setClient(client);
+			comparable.setPlugin(this);
+		}
 	}
 }
